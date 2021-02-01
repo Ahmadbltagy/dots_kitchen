@@ -1,4 +1,5 @@
-import 'package:dots_kitchen/categories_screen.dart';
+import 'categories_meals_screen.dart';
+import 'categories_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -23,9 +24,18 @@ class MyApp extends StatelessWidget {
             fontWeight: FontWeight.bold,
             fontSize: 22,
           ),
+          bodyText1: TextStyle(
+            color: Colors.white,
+            fontFamily: 'OpenSans',
+            fontWeight: FontWeight.bold,
+            fontSize: 20,
+          ),
         ),
       ),
       home: MyHomePage(),
+      routes: {
+        '/categories-meal': (ctx) => CatMealScreen(),
+      },
     );
   }
 }
