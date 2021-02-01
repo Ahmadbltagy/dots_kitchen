@@ -32,32 +32,10 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: MyHomePage(),
       routes: {
+        '/': (ctx) => CategoriesScreen(),
         '/categories-meal': (ctx) => CatMealScreen(),
       },
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          elevation: 0,
-          title: Text(
-            "dotsKitchen.",
-            style: Theme.of(context).textTheme.headline1,
-          ),
-        ),
-        body: Center(
-          child: CategoriesScreen(),
-        ));
   }
 }
