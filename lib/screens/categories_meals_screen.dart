@@ -23,6 +23,7 @@ class CatMealScreen extends StatelessWidget {
         itemCount: catMeals.length,
         itemBuilder: (ctx, index) {
           return MealItem(
+            id: catMeals[index].id,
             title: catMeals[index].title,
             imageUrl: catMeals[index].imageUrl,
             duration: catMeals[index].duration,
